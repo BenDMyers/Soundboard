@@ -1,0 +1,22 @@
+{
+  "name": "soundboard",
+  "version": "1.0.0",
+  "description": "Soundboard tray application built with Electron",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenDMyers/Soundboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenDMyers/Soundboard/issues"
+  },
+  "homepage": "https://github.com/BenDMyers/Soundboard#readme",
+  "dependencies": {
+    "electron": "^1.7.9"
+  }
+}
