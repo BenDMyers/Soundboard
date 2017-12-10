@@ -60,8 +60,13 @@ function openAdd() {
     ipcRenderer.send('OPEN_ADD');
 }
 
-ipcRenderer.on('ADD_SOUNDBITE2', (event, name, audio, icon) => {
-    console.log(audio);
-    
+ipcRenderer.on('ADD_SOUNDBITE2', (event, name, id, audio, icon) => {
+    const newSoundbite = {id: id, name: name, img: icon, sound: audio};
+    soundbites.push(newSoundbite);
+    soundbites.sort((a, b) => {
+        return a.name.localeCompare(b.name)
+    });
+    var json = JSON.stringify(soundbites);
+    fs.writeFile(`${__dirname}/soundbites.json`, json, 'utf8', () => {});
     populateButtons(soundbites);
 });
