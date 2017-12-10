@@ -8,7 +8,7 @@ var audio;
 function createButton(id, name, img) {
     var button = document.createElement('button');
     button.classList = 'btn btn-secondary dolce col-xs sq';
-    button.innerHTML = `<center><img id="btn-${id}" src="../assets/icons/${img}" width="50%" style="display: block; padding-bottom: 10px;"/></center>` + name;
+    button.innerHTML = `<center><img id="btn-${id}" src="../assets/icons/${img}" width="75px" height="75px" style="display: block; margin-bottom: 10px; margin-top: 20px;"/><span style="display: block; width: 100px;"><p class="truncate">${name}</p></span></center>`;
     return button;
 }
 

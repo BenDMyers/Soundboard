@@ -5,7 +5,7 @@ const MainWindow = require('./app/MainWindow');
 const SoundboardTray = require('./app/SoundboardTray');
 const AddWindow = require('./app/AddWindow');
 
-const {app, BrowserWindow, Tray, ipcMain} = electron;
+const {app, BrowserWindow, Tray, ipcMain, Menu} = electron;
 
 let mainWindow;
 let addWindow;
@@ -26,10 +26,21 @@ app.on('ready', () => {
 
 ipcMain.on('OPEN_ADD', (event) => {
     event.preventDefault();
-    addWindow = new AddWindow(`file://${__dirname}/src/add.html`);
+    if(addWindow == null) {
+        addWindow = new AddWindow(`file://${__dirname}/src/add.html`);
+    }
+    else {
+        addWindow.show();
+    }
+    Menu.setApplicationMenu(null);
 });
 
 ipcMain.on('ADD_SOUNDBITE', (event, name, id, audio, icon) => {
     addWindow.close();
+    addWindow = null;
     mainWindow.webContents.send('ADD_SOUNDBITE2', name, id, audio, icon);
 });
+
+ipcMain.on('CLOSE_ADD', (event) => {
+    addWindow = null;
+})

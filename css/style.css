@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'Espresso Dolce';
+    font-family: 'My Font Regular';
     font-style: 'normal';
-    src: local('Espresso Dolce'), local('EspressoDolce'), url('EspressoDolce.ttf');
+    src: local('My Font Regular'), local('MyFont-Regular'), url('MyFont-Regular.ttf');
 }
 
 .dolce {
-    font-family: 'Espresso Dolce', sans-serif;
+    font-family: 'My Font Regular', sans-serif;
     font-size: 150%;
 }
 
@@ -17,7 +17,7 @@
 
 .form-control {
     background-color: rgba(255, 255, 255, 0.1);
-    font-family: 'Espresso Dolce', sans-serif;
+    font-family: 'My Font Regular', sans-serif;
     color: white;
     font-size: 125%;
     border-radius: 0px;
@@ -25,7 +25,7 @@
 
 .form-control:focus {
     background-color: rgba(255, 255, 255, 0.1);
-    font-family: 'Espresso Dolce', sans-serif;
+    font-family: 'My Font Regular', sans-serif;
     color: white;
     font-size: 125%;
 }
@@ -40,4 +40,10 @@
     width: 50%;
     height: 150px;
     border: 1px solid rgb(75, 75, 75);
+}
+
+.truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
