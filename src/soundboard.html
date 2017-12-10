@@ -5,14 +5,29 @@
         <title>Soundboard</title>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
+        <script src="./soundboard.js"></script>
     </head>
     <body>
         <input id="filter" type="search" placeholder="Filter soundbites by name..." class="form-control"/>
 
-        <div id="soundbites" class="container"></div>
+        <div id="soundbites" class="container-fluid">
+            <div class="row">
+                <button class="btn btn-secondary dolce col-xs sq">
+                    <center><img src="../assets/windows-icon@2x.png" width="50%" style="display: block; padding-bottom: 10px;"/></center>
+                    When I was
+                </button>
+                <button class="btn btn-secondary dolce col-xs sq">a young boy</button>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary dolce col-xs sq">When I was</button>
+                <button class="btn btn-secondary dolce col-xs sq">a young boy</button>
+            </div>
+        </div>
 
-        <button id="add-button" class="btn btn-secondary dolce" style="width: 100%;">
+        <button id="add-button" class="btn btn-primary dolce" style="width: 100%;">
             Add new soundbite
         </button>
+
+
     </body>
 </html>

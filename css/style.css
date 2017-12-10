@@ -12,6 +12,7 @@
 .btn-secondary {
     background-color: rgba(255, 255, 255, 0.05);
     border: 0px;
+    border-radius: 0px;
 }
 
 .form-control {
@@ -33,4 +34,10 @@
     font-style: italic;
     color: rgb(75, 75, 75);
     font-size: 125%;
+}
+
+.sq {
+    width: 50%;
+    height: 150px;
+    border: 1px solid rgb(75, 75, 75);
 }

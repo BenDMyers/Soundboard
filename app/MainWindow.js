@@ -7,7 +7,7 @@ class MainWindow extends BrowserWindow {
             width: 300,
             height: 500,
             frame: false,
-            resizable: true,
+            resizable: false,
             show: false,
             skipTaskbar: true
         });
