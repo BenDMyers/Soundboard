@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Espresso Dolce';
+    font-style: 'normal';
+    src: local('Espresso Dolce'), local('EspressoDolce'), url('EspressoDolce.ttf');
+}
+
+.dolce {
+    font-family: 'Espresso Dolce', sans-serif;
+    font-size: 150%;
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 0px;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Espresso Dolce', sans-serif;
+    color: white;
+    font-size: 125%;
+    border-radius: 0px;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Espresso Dolce', sans-serif;
+    color: white;
+    font-size: 125%;
+}
+
+.form-control::placeholder {
+    font-style: italic;
+    color: rgb(75, 75, 75);
+    font-size: 125%;
+}

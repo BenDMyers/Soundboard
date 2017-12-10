@@ -1,5 +1,5 @@
 {
-  "name": "soundboard",
+  "name": "Soundboard",
   "version": "1.0.0",
   "description": "Soundboard tray application built with Electron",
   "main": "index.js",
