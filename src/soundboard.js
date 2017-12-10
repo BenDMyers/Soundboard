@@ -1,6 +1,9 @@
 const fs = require('fs');
+const electron = require('electron');
+const {ipcRenderer} = electron;
 
-soundbites = [];
+var soundbites = [];
+var audio;
 
 function createButton(id, name, img) {
     var button = document.createElement('button');
@@ -25,7 +28,11 @@ function populateButtons(list) {
     }
 }
 
-function play(path) {new Audio(`../assets/sounds/${path}`).play();}
+function play(path) {
+    if(audio != null) {audio.pause();}
+    audio = new Audio(`../assets/sounds/${path}`);
+    audio.play();
+}
 
 function filter() {
     var search = document.getElementById('filter');
@@ -48,3 +55,13 @@ function read() {
     soundbites = JSON.parse(data.toString());
     console.log(soundbites);
 }
+
+function openAdd() {
+    ipcRenderer.send('OPEN_ADD');
+}
+
+ipcRenderer.on('ADD_SOUNDBITE2', (event, name, audio, icon) => {
+    console.log(audio);
+    
+    populateButtons(soundbites);
+});

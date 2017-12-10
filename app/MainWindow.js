@@ -11,14 +11,8 @@ class MainWindow extends BrowserWindow {
             show: false,
             skipTaskbar: true
         });
-
-        // Hide window when it loses focus
-        this.on('blur', this.onBlur.bind(this));
-
         this.loadURL(url);
     }
-
-    onBlur() { this.hide(); }
 }
 
 module.exports = MainWindow;
