@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/BenDMyers/Soundboard#readme",
   "dependencies": {
-    "electron": "^1.7.9"
+    "electron": "^1.7.11"
   }
 }
